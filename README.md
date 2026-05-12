@@ -124,15 +124,22 @@ python scripts/infer.py \
 ## Files
 
 ```text
-configs/llama32_1b.yaml
-ios_disco/
-scripts/download_dataset.py
-scripts/inspect_data.py
-scripts/train.py
-scripts/infer.py
-data/pop909_section.zip
-data/README.md
-examples/free_prompt.txt
+configs/llama32_1b.yaml      Training config for Llama-3.2-1B-Instruct.
+
+ios_disco/data.py            Dataset loading, split selection, and dataset inspection.
+ios_disco/modeling.py        Unsloth Llama model/tokenizer loading.
+ios_disco/span_utils.py      Token span detection for ABC blocks wrapped by {{...}}.
+ios_disco/trainer.py         SFT trainer with the DiSCO contrastive objective.
+
+scripts/download_dataset.py  Downloads cszhu09876/ios-disco-abc into ./data.
+scripts/inspect_data.py      Prints dataset columns, section labels, and ABC block counts.
+scripts/train.py             Fine-tunes Llama with SFT and DiSCO.
+scripts/infer.py             Runs inference with a trained LoRA adapter.
+
+data/pop909_section.zip      Original section-level POP909 MIDI/ABC annotation package.
+data/README.md               Data source and download notes.
+
+examples/free_prompt.txt     Example free-form prompt for inference.
 ```
 
 ## Citation
