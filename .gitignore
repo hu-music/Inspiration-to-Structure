@@ -1,0 +1,22 @@
+# Local data and model artifacts
+data/*
+!data/README.md
+!data/pop909_section.zip
+outputs/
+model/
+checkpoints/
+trainer_checkpoints/
+wandb/
+runs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

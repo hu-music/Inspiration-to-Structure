@@ -1,0 +1,10 @@
+Generate a chorus following this ABC melody:
+
+X: 1
+M: 4/4
+L: 1/8
+Q:1/4=100
+K:C
+V:1
+CDEF GABc|cBAG FEDC|
+
